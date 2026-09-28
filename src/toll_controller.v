@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module toll_controller (
     input        clk,
     input        rst,
