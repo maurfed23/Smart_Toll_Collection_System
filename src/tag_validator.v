@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module tag_validator (
     input  [7:0] tag_id,
     output       tag_valid
