@@ -16,10 +16,10 @@ error(1 bit)                                Indicates transaction failure;
 error_code(2 bits)                          Indicates reason for failure;
 
 3. VEHICLE_CLASSES:
-00 → Car       → 50
-01 → Bus       → 100
-10 → Truck     → 150
-11 → Heavy     → 200
+00 → Car       → 50;
+01 → Bus       → 100;
+10 → Truck     → 150;
+11 → Heavy     → 200;
 
 4. Error-code parameters
 
@@ -51,14 +51,14 @@ Our FSM has 8 states, therefore we use a 3-bit state register.
    next_state;
 
 7. FSM states
-IDLE	           000	                       Wait for new transaction
-INPUT_CAPTURE	   001	                       Transaction information is captured
-TAG_VALIDATE	   010	                       Check whether tag is valid
-TOLL_CALC	       011	                       Determine toll based on vehicle
-BALANCE_CHECK	   100	                       Check whether balance is sufficient
-DEDUCT	           101	                       Deduct toll from balance
-DONE	           110	                       Successful transaction completed
-ERROR_STATE	       111	                       Transaction failed
+IDLE	           000	                       Wait for new transaction;
+INPUT_CAPTURE	   001	                       Transaction information is captured;
+TAG_VALIDATE	   010	                       Check whether tag is valid;
+TOLL_CALC	       011	                       Determine toll based on vehicle;
+BALANCE_CHECK	   100	                       Check whether balance is sufficient;
+DEDUCT	           101	                       Deduct toll from balance;
+DONE	           110	                       Successful transaction completed;
+ERROR_STATE	       111	                       Transaction failed;
 
 
 
