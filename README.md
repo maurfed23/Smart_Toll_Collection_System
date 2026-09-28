@@ -88,3 +88,17 @@ smart_toll_top
     ├── transaction_accepted
     ├── error
     └── error_code
+
+
+
+
+MODULE Flip_Flops:
+input_register.v - 23 Flip Flops;
+tag_validator.v - 0 Flip Flops;
+toll_calculator.v - 0 Flip Flops;
+Toll amount register(inside Top module.....not a separate module) - 12 Flip Flops;
+toll_controller.v - 3 Flip Flops;
+transaction_processor.v - 12 Flip Flops;
+output_register.v - 5 Flip Flops;
+
+Total Flip Flops - 55 Flip FLops;
