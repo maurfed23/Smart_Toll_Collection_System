@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module transaction_processor (
     input         clk,
     input         rst,
