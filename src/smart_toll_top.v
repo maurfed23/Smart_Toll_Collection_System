@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module smart_toll_top (
     input        clk,
     input        rst,
