@@ -102,3 +102,9 @@ transaction_processor.v - 12 Flip Flops;
 output_register.v - 5 Flip Flops;
 
 Total Flip Flops - 55 Flip FLops;
+
+
+And the three purely combinational blocks are:
+Tag Validator
+Toll Calculator
+Balance Comparator
