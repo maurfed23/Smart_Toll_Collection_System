@@ -1,19 +1,19 @@
 1. Inputs to the Smart Toll Collection System
-clk(1 bit)	 - Clock	System clock
-rst(1 bit)	- Control	Synchronous reset
-transaction_valid(1 bit) - 	Control	Indicates a new vehicle transaction
-tag_id(8 bits)  -	   Data	RFID/electronic toll tag ID
-vehicle_type(2 bits)	-   Data	Identifies vehicle category
-balance(12 bits)	 -   Data	Available account balance
+clk(1 bit)	                                Clock System clock
+rst(1 bit)	                                Control Synchronous reset
+transaction_valid(1 bit) 	                Control	Indicates a new vehicle transaction
+tag_id(8 bits)  	                        Data RFID/electronic toll tag ID
+vehicle_type(2 bits)	                    Data Identifies vehicle category
+balance(12 bits)	                        Data Available account balance
 
 
 2. Outputs
-toll_amount(12 bits) - 	Toll calculated for the vehicle
-remaining_balance(12 bits) - 	Balance after successful deduction
-transaction_done(1 bit) - 	Indicates transaction processing has finished
-transaction_accepted(1 bit) -	Indicates successful transaction
-error(1 bit) - 	Indicates transaction failure
-error_code(2 bits) - 	Indicates reason for failure
+toll_amount(12 bits)                        Toll calculated for the vehicle
+remaining_balance(12 bits)  	            Balance after successful deduction
+transaction_done(1 bit)                     Indicates transaction processing has finished
+transaction_accepted(1 bit)                 Indicates successful transaction
+error(1 bit)                                Indicates transaction failure
+error_code(2 bits)                          Indicates reason for failure
 
 3. VEHICLE_CLASSES:
 00 → Car       → 50
@@ -34,7 +34,7 @@ localparam reg [1:0] INVALID_TRANSACTION  = 2'b11;
 
 Our FSM has 8 states, therefore we use a 3-bit state register.
 
-typedef enum logic [2:0] {
+
 
     IDLE          = 3'd0,
     INPUT_CAPTURE = 3'd1,
@@ -45,21 +45,20 @@ typedef enum logic [2:0] {
     DONE          = 3'd6,
     ERROR_STATE   = 3'd7
 
-} state_t;
 
 6. Internal Registers:
-   state_t current_state;
-   state_t next_state;
+   current_state;
+   next_state;
 
 7. FSM states
-IDLE	000	Wait for new transaction
-INPUT_CAPTURE	001	Transaction information is captured
-TAG_VALIDATE	010	Check whether tag is valid
-TOLL_CALC	011	Determine toll based on vehicle
-BALANCE_CHECK	100	Check whether balance is sufficient
-DEDUCT	101	Deduct toll from balance
-DONE	110	Successful transaction completed
-ERROR_STATE	111	Transaction failed
+IDLE	           000	                       Wait for new transaction
+INPUT_CAPTURE	   001	                       Transaction information is captured
+TAG_VALIDATE	   010	                       Check whether tag is valid
+TOLL_CALC	       011	                       Determine toll based on vehicle
+BALANCE_CHECK	   100	                       Check whether balance is sufficient
+DEDUCT	           101	                       Deduct toll from balance
+DONE	           110	                       Successful transaction completed
+ERROR_STATE	       111	                       Transaction failed
 
 
 
