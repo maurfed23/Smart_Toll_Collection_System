@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module toll_calculator (
     input  [1:0]  vehicle_type,
     output reg [11:0] calculated_toll
