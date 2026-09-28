@@ -1,19 +1,19 @@
 1. Inputs to the Smart Toll Collection System
-clk(1 bit)	                                Clock System clock
-rst(1 bit)	                                Control Synchronous reset
-transaction_valid(1 bit) 	                Control	Indicates a new vehicle transaction
-tag_id(8 bits)  	                        Data RFID/electronic toll tag ID
-vehicle_type(2 bits)	                    Data Identifies vehicle category
-balance(12 bits)	                        Data Available account balance
+clk(1 bit)	                                Clock System clock;
+rst(1 bit)	                                Control Synchronous reset;
+transaction_valid(1 bit) 	                Control	Indicates a new vehicle transaction;
+tag_id(8 bits)  	                        Data RFID/electronic toll tag ID;
+vehicle_type(2 bits)	                    Data Identifies vehicle category;
+balance(12 bits)	                        Data Available account balance;
 
 
 2. Outputs
-toll_amount(12 bits)                        Toll calculated for the vehicle
-remaining_balance(12 bits)  	            Balance after successful deduction
-transaction_done(1 bit)                     Indicates transaction processing has finished
-transaction_accepted(1 bit)                 Indicates successful transaction
-error(1 bit)                                Indicates transaction failure
-error_code(2 bits)                          Indicates reason for failure
+toll_amount(12 bits)                        Toll calculated for the vehicle;
+remaining_balance(12 bits)  	            Balance after successful deduction;
+transaction_done(1 bit)                     Indicates transaction processing has finished;
+transaction_accepted(1 bit)                 Indicates successful transaction;
+error(1 bit)                                Indicates transaction failure;
+error_code(2 bits)                          Indicates reason for failure;
 
 3. VEHICLE_CLASSES:
 00 → Car       → 50
